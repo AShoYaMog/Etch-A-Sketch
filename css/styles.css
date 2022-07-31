@@ -3,21 +3,36 @@
     padding: 0;
 }
 
+.conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.setting {
+    display: flex;
+    flex-grow: 1;
+}
+
 .sketchConteiner {
     border: 2px solid black;
     width: 400px;
     height: 400px;
-    display: flex;
-    flex-direction: column;    
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+
 }
 
-.sketchConteiner div {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-}
 
 .sketchPixel {
     border: 0.5px solid black;
-    flex-grow: 1;
+    
 }
