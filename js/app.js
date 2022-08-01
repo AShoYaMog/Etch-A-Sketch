@@ -1,15 +1,28 @@
-let colomn = 16;
-let row = 16;
-let grid = colomn * row;
+let grid = 0;
+let gridInput = document.querySelector('#gridSize');
+gridInput.addEventListener('mouseup', () => {
+    gridControle();
+})
 let sketchConteiner = document.querySelector('.sketchConteiner');
 let mouseDown = false;
 document.addEventListener('mousedown', () => {mouseDown = true})
 document.addEventListener('mouseup', () => {mouseDown = false})
 
+function gridControle() {
+    grid = gridInput.value ** 2;
+    document.querySelector('.gridSize').textContent = `Grid size: ${gridInput.value}x${gridInput.value}`;
+    gridDestroer(sketchConteiner);
+    gridBuilder(grid);
+}
+
+function gridDestroer(sketchConteiner) {
+    sketchConteiner.innerHTML = '';
+}
+
 function gridBuilder(grid) {
+    sketchConteiner.style.cssText = `grid-template-columns: repeat(${gridInput.value}, 1fr); grid-template-rows: repeat(${gridInput.value}, 1fr);`;
     for (let i = 0; i < grid; i++) {
         let pixel = document.createElement('div');
-        pixel.setAttribute('class','sketchPixel');
         pixel.addEventListener('mousedown', draw);
         pixel.addEventListener('mouseover', draw)
         sketchConteiner.appendChild(pixel);
@@ -24,4 +37,5 @@ function draw (e) {
     }    
 }
 
-gridBuilder(grid)
+gridControle(grid)
+

@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+button {
+    height: 25px;
+    width: 50px;
+}
 
 .conteiner {
     display: flex;
@@ -19,6 +23,7 @@
 .setting {
     display: flex;
     flex-grow: 1;
+    flex-direction: column;
 }
 
 .sketchConteiner {
@@ -26,13 +31,43 @@
     width: 400px;
     height: 400px;
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    
 
 }
 
+.colorPicer {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border: 2px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+}
 
-.sketchPixel {
-    border: 0.5px solid black;
-    
+.colorPicer input {
+    position: relative;
+    left: -5px;
+    top: -5px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 85px;
+    width: 85px;
+}
+
+.colorPicerConteiner {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+}
+
+.colorControle div{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: auto 1fr;
 }
