@@ -5,8 +5,9 @@ gridInput.addEventListener('mouseup', () => {
 })
 let sketchConteiner = document.querySelector('.sketchConteiner');
 let mouseDown = false;
-document.addEventListener('mousedown', () => {mouseDown = true})
-document.addEventListener('mouseup', () => {mouseDown = false})
+document.addEventListener('mousedown', () => {mouseDown = true});
+document.addEventListener('mouseup', () => {mouseDown = false});
+document.querySelector('.sketchConteiner').addEventListener('mouseleave', () => {mouseDown = false});
 
 function gridControle() {
     grid = gridInput.value ** 2;
