@@ -2,14 +2,19 @@ let grid = 0;
 let gridInput = document.querySelector('#gridSize');
 gridInput.addEventListener('mouseup', () => {
     gridControle();
-})
+});
+let colorPicer = document.querySelector('#color');
+let color = colorPicer.value;
+colorPicer.addEventListener('input', () => {
+    color = colorPicer.value;
+});
 let sketchConteiner = document.querySelector('.sketchConteiner');
 let mouseDown = false;
 document.addEventListener('mousedown', () => {mouseDown = true});
 document.addEventListener('mouseup', () => {mouseDown = false});
 sketchConteiner.addEventListener('mouseleave', () => {mouseDown = false});
-sketchConteiner.addEventListener('dragstart', (e) => {e.preventDefault()})
-sketchConteiner.addEventListener('drop', (e) => {e.preventDefault()})
+sketchConteiner.addEventListener('dragstart', (e) => {e.preventDefault()});
+sketchConteiner.addEventListener('drop', (e) => {e.preventDefault()});
 
 function gridControle() {
     grid = gridInput.value ** 2;
@@ -36,7 +41,7 @@ function draw (e) {
     if (e.type === 'mouseover' && !mouseDown){
         return
     }else {
-        e.target.style.backgroundColor = 'black'
+        e.target.style.backgroundColor = color;
     }    
 }
 
