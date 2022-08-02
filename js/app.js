@@ -1,20 +1,16 @@
+let sketchConteiner = document.querySelector('.sketchConteiner');
 let grid = 0;
 let gridInput = document.querySelector('#gridSize');
-gridInput.addEventListener('mouseup', () => {
-    gridControle();
-});
 let colorPicer = document.querySelector('#color');
 let color = colorPicer.value;
-colorPicer.addEventListener('input', () => {
-    color = colorPicer.value;
-});
-let sketchConteiner = document.querySelector('.sketchConteiner');
 let mouseDown = false;
-document.addEventListener('mousedown', () => {mouseDown = true});
-document.addEventListener('mouseup', () => {mouseDown = false});
 sketchConteiner.addEventListener('mouseleave', () => {mouseDown = false});
 sketchConteiner.addEventListener('dragstart', (e) => {e.preventDefault()});
 sketchConteiner.addEventListener('drop', (e) => {e.preventDefault()});
+gridInput.addEventListener('mouseup', () => {gridControle();});
+colorPicer.addEventListener('input', () => {color = colorPicer.value;});
+document.addEventListener('mousedown', () => {mouseDown = true});
+document.addEventListener('mouseup', () => {mouseDown = false});
 
 function gridControle() {
     grid = gridInput.value ** 2;
