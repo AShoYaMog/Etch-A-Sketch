@@ -17,8 +17,18 @@
                     <input type="range" id="gridSize" min="2" max="100" value="16" step="1">                    
                 </div> 
                 <div class="color">
-                    <label for="color">Color picer</label>
-                    <input type="color" id="color" class="color" value="">
+                    <div>Color picer</div>
+                    <input type="color" id="color" class="color" value="#000000">
+                    <div class="defoltColor">
+                        <button class="palettElement" value="#000000" style="background-color: black;"></button> 
+                        <button class="palettElement" value="#FFFFFF" style="background-color: white;"></button>                                               
+                    </div>
+                    <div>
+                        <div class="palett">
+                            <button class="palettAddColor" onclick="paletAddColor()">+</button>
+                        </div>
+                        <button class="clear" onclick="clearPalette()">Clear palette</button>
+                    </div>
                 </div>               
             </div>
             <div class="sketchConteiner" draggable="false"></div>    

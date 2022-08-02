@@ -1,6 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    color: whitesmoke;
+}
+
+body {
+    background-color: #202A44;
 }
 
 .conteiner {
@@ -17,7 +22,7 @@
 }
 
 .sketchConteiner {
-    border: 2px solid black;
+    border: 2px solid whitesmoke;
     width: 400px;
     height: 400px;
     display: grid;
@@ -30,7 +35,46 @@
     flex-direction: column;
 }
 
-.color {
+#gridSize {
+    cursor: pointer;
+}
+
+#color {
    width: 100%;
    border: none;
+   cursor: pointer;
+   background-color: #202A44;
 }
+
+.defoltColor {
+    display: flex;
+    align-items: center;
+}
+
+.palett {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 130px;
+}
+
+.palettElement{
+    width: 25px;
+    height: 25px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.palettAddColor {
+    width: 25px;
+    height: 25px;
+    border: 1px solid gray;
+    cursor: pointer;
+    color: #202A44;
+}
+
+.clear {
+    color: #202A44;
+    border: 1px solid whitesmoke;
+}
+
