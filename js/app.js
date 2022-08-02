@@ -2,9 +2,9 @@ let mouseDown = false;
 let sketchConteiner = document.querySelector('.sketchConteiner');
 let grid = 0;
 let gridInput = document.querySelector('#gridSize');
-let colorPicer = document.querySelector('#color');
+let colorPicer = document.querySelector('#colorInput');
 let colorPaletteConteiner = document.querySelector('.palett');
-let paletteElement = document.querySelectorAll('.palettElement');
+let paletteElement = document.querySelectorAll('.buttonSmall');
 document.addEventListener('mousedown', () => {mouseDown = true});
 document.addEventListener('mouseup', () => {mouseDown = false});
 sketchConteiner.addEventListener('mouseleave', () => {mouseDown = false});
@@ -43,7 +43,7 @@ function gridBuilder(grid) {
 function palettAddColor () {
     let paletElement = document.createElement('button');
     paletElement.setAttribute('value', colorPicer.value);
-    paletElement.setAttribute('class', 'palettElement');
+    paletElement.setAttribute('class', 'buttonSmall border');
     paletElement.style.backgroundColor = colorPicer.value;
     paletElement.addEventListener('mouseup', () => {
         colorPicer.value = paletElement.value;
@@ -56,7 +56,7 @@ function palletRemoveColor () {
 }
 
 function clearPalette () {
-    colorPaletteConteiner.innerHTML = '<button class="palettAddColor" onclick="paletAddColor()">+</button>'
+    colorPaletteConteiner.innerHTML = ''
 }
 
 function draw (e) {
