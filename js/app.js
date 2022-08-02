@@ -7,7 +7,9 @@ let sketchConteiner = document.querySelector('.sketchConteiner');
 let mouseDown = false;
 document.addEventListener('mousedown', () => {mouseDown = true});
 document.addEventListener('mouseup', () => {mouseDown = false});
-document.querySelector('.sketchConteiner').addEventListener('mouseleave', () => {mouseDown = false});
+sketchConteiner.addEventListener('mouseleave', () => {mouseDown = false});
+sketchConteiner.addEventListener('dragstart', (e) => {e.preventDefault()})
+sketchConteiner.addEventListener('drop', (e) => {e.preventDefault()})
 
 function gridControle() {
     grid = gridInput.value ** 2;
