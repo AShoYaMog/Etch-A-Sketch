@@ -40,7 +40,7 @@ function gridBuilder(grid) {
     }        
 }
 
-function paletAddColor () {
+function palettAddColor () {
     let paletElement = document.createElement('button');
     paletElement.setAttribute('value', colorPicer.value);
     paletElement.setAttribute('class', 'palettElement');
@@ -51,16 +51,17 @@ function paletAddColor () {
     colorPaletteConteiner.appendChild(paletElement); 
 }
 
+function palletRemoveColor () {
+    colorPaletteConteiner.removeChild(colorPaletteConteiner.lastChild)
+}
+
 function clearPalette () {
     colorPaletteConteiner.innerHTML = '<button class="palettAddColor" onclick="paletAddColor()">+</button>'
 }
 
 function draw (e) {
-    if (e.type === 'mouseover' && !mouseDown){
-        return
-    }else {
-        e.target.style.backgroundColor = colorPicer.value;
-    }    
+    if (e.type === 'mouseover' && !mouseDown) return;    
+    e.target.style.backgroundColor = colorPicer.value;       
 }
 
 gridControle(grid)

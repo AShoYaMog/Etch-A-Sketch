@@ -51,6 +51,16 @@ body {
     align-items: center;
 }
 
+.palettConteiner {
+    display: flex;
+    flex-direction: column;
+    max-width: 130px;
+}
+
+.palettConteiner div {
+    display: flex;
+}
+
 .palett {
     display: flex;
     align-items: center;
@@ -65,7 +75,8 @@ body {
     cursor: pointer;
 }
 
-.palettAddColor {
+.palettAddColor,
+.palletRemoveColor {
     width: 25px;
     height: 25px;
     border: 1px solid gray;
