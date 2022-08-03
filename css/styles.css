@@ -48,6 +48,10 @@ body {
     background-color: rgba(128,128,128,0.2);
 }
 
+.nevGridButton {
+    display: flex;
+}
+ 
 #gridSize {
     cursor: pointer;
 }
@@ -89,7 +93,7 @@ body {
     flex-wrap: wrap;
 }
 
-.palettAddColor {
+.button {
     width: 79px;
     height: 25px;
     margin: 1px;

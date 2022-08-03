@@ -10,7 +10,7 @@ document.addEventListener('mouseup', () => {mouseDown = false});
 sketchConteiner.addEventListener('mouseleave', () => {mouseDown = false});
 sketchConteiner.addEventListener('dragstart', (e) => {e.preventDefault()});
 sketchConteiner.addEventListener('drop', (e) => {e.preventDefault()});
-gridInput.addEventListener('mouseup', () => {gridControle();});
+gridInput.addEventListener('mouseup', () => {document.querySelector('.gridSize').textContent = `Grid size: ${gridInput.value}x${gridInput.value}`;});
 paletteElement.forEach(function(button) {
     button.addEventListener('mouseup', function (e) {
     console.log(e.target.value)
@@ -20,7 +20,6 @@ paletteElement.forEach(function(button) {
 
 function gridControle() {
     grid = gridInput.value ** 2;
-    document.querySelector('.gridSize').textContent = `Grid size: ${gridInput.value}x${gridInput.value}`;
     gridDestroer(sketchConteiner);
     gridBuilder(grid);
 }

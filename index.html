@@ -13,8 +13,11 @@
         <div class="content">
             <div class="setting">
                 <div class="Controle">
-                    <div class="gridSize">Grid size:</div>
-                    <input type="range" id="gridSize" min="2" max="100" value="16" step="1">                    
+                    <div class="gridSize">Grid size: 16x16</div>
+                    <input type="range" id="gridSize" min="2" max="100" value="16" step="1">
+                    <div class="nevGridButton">
+                        <button class="button border" onmouseup="gridControle()">New</button>
+                    </div>
                 </div> 
                 <div class="Controle">
                     <div>Color picer</div>
@@ -28,7 +31,7 @@
                     <div>
                         <div class="palettConteiner">
                             <div>
-                                <button class="palettAddColor border" onclick="palettAddColor()">Add color</button>
+                                <button class="button border" onclick="palettAddColor()">Add color</button>
                                 <button class="buttonSmall border" onclick="palletRemoveColor()"> < </button>
                                 <button class="buttonSmall  border" onclick="clearPalette()">X</button>   
                             </div>
