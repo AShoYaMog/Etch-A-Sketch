@@ -34,6 +34,7 @@ body {
     width: 400px;
     height: 400px;
     display: grid;
+    background-color: white;
 }
 
 .setting {
@@ -71,10 +72,7 @@ body {
 
 .defoltColor {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3px;
-    
+    justify-content: center;    
 }
 
 .palettConteiner {
@@ -109,4 +107,8 @@ body {
     background-color: rgba(128,128,128,0.2);
 }
 
+.button:hover,
+.buttonSmall:hover {
+    background-color: #ADD8E6;
+}
 
