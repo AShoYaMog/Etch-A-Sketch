@@ -86,5 +86,4 @@ function draw (e) {
 }
 
 gridControle(grid)
-let a = 255;
-alert(a.toString(16))
+
